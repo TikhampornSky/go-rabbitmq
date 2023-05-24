@@ -44,7 +44,7 @@ func main() {
 
 	err = ch.QueueBind(
 		q.Name, // queue name
-		"",     // routing key
+		"",     // routing key (for fanout exchange, routing key is ignored)
 		"logs", // exchange
 		false,
 		nil)
