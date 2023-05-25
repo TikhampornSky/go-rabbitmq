@@ -52,6 +52,7 @@ func main() {
 
 		// A binding is a relationship between an exchange and a queue. This can be simply read as:
 		// the queue is interested in messages from this exchange.
+		// subscribe to only based on severity (s)
 		err = ch.QueueBind(
 			q.Name,        // queue name
 			s,             // routing key (binding key (this line!) must be exactly the same as the routing key (Line 45 in sender) of the message.)
